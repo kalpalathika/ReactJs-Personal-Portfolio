@@ -1,0 +1,33 @@
+.date {
+  color: black;
+}
+
+#dark .date{
+  color: white;
+}
+
+.icon-style {
+  background-color: rgb(217, 252, 17);
+}
+
+
+
+
+.tech-used-at-work p{
+    background-color: #e7f1fd;
+    border-radius: 90px;
+    color: #0473ea;
+    padding: 10px;
+    text-align: center;
+
+}
+.tech-used-at-work p:hover{
+    background-color: rgb(6, 115, 234,0.7);
+    cursor: pointer;
+}
+
+.vertical-timeline::before {
+  background: rgb(56, 209, 3,0.5) !important; /* Change this to your desired color */
+}
+
+
