@@ -58,8 +58,6 @@ const Contact = () => {
                   <label className="form-lebel">Job Types</label>
                   <select name="job_type" className="custom-select">
                     <option>Full-time</option>
-                    <option>Working Student</option>
-                    <option>Part-time</option>
                     <option>Contract</option>
                   </select>
                 </div>
