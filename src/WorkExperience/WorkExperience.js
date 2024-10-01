@@ -128,7 +128,32 @@ const WorkExperience = () => {
         { techname: "Agile Methodologies" },
       ],
     },
+    {
+      name: "Godrej Interio",
+      position: "Graduate Engineering Trainee",
+      year: "Sept, 2019 - Sept, 2020",
+      des: (
+        <ul>
+          <li>
+            Improved user experience by 20% on the Godrej Interio e-commerce site
+            (B2C & B2B) by leveraging Google Analytics for actionable insights.
+          </li>
+          <li>
+            Increased efficiency by 50% by automating bulk form filling for Google
+            My Business using JavaScript.
+          </li>
+        </ul>
+      ),
+      techused: [
+        { techname: "Google Analytics" },
+        { techname: "Software Engineering Life Cycle" },
+        { techname: "JavaScript" },
+        { techname: "Figma" },
+        { techname: "UI/UX" },
+      ],
+    },
   ];
+  
   
 
   return (
