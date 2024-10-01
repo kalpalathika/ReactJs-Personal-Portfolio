@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./navmobile.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-scroll";
-import ReactSwitch from "react-switch";
+import profileImg from "../images/a.jpg";
+
 import {
   FcNightPortrait,
   FcHome,
@@ -31,6 +32,14 @@ const NavbarMobile = ({ toggleTheme, theme }) => {
 
       {open ? (
         <div className="mobile-nav">
+          <div className="mt-4">
+            <img
+              src={profileImg}
+              alt="Profile"
+              className="rounded-circle"
+              style={{ width: '100px', height: '100px', objectFit: 'cover' }}
+            />
+          </div>
           <ul>
 
             <li className="nav-item-mobile">
