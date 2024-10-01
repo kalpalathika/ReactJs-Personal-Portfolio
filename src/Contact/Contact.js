@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import "./contact.css";
 import { IoIosSend } from "react-icons/io";
 import Fade from "react-reveal/Fade";
-import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const form = useRef();
@@ -10,21 +9,21 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-      form.current,
-      'YOUR_USER_ID' // Replace with your EmailJS user ID (or public key)
-    )
-    .then((result) => {
-      console.log(result.text);
-      alert('Email sent successfully!');
-    }, (error) => {
-      console.log(error.text);
-      alert('Failed to send email. Please try again.');
-    });
+    // emailjs.sendForm(
+    //   'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+    //   'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+    //   form.current,
+    //   'YOUR_USER_ID' // Replace with your EmailJS user ID (or public key)
+    // )
+    // .then((result) => {
+    //   console.log(result.text);
+    //   alert('Email sent successfully!');
+    // }, (error) => {
+    //   console.log(error.text);
+    //   alert('Failed to send email. Please try again.');
+    // });
 
-    e.target.reset(); // Clear the form after sending
+    // e.target.reset(); // Clear the form after sending
   };
 
   return (
