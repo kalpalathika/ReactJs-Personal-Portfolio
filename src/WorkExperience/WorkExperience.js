@@ -13,6 +13,27 @@ import "react-vertical-timeline-component/style.min.css";
 const WorkExperience = () => {
   const data = [
     {
+      name: "Mindex",
+      position: "Software Engineering Co-op",
+      year: "Jan, 2025 - Present",
+      des: (
+        <ul>
+          <li>
+            Currently working on modernizing an invoice-based corporate banking system using React, C# .NET, MySQL, and AWS Lambda functions.
+          </li>
+        </ul>
+      ),
+      techused: [
+        { techname: ".Net Framework" },
+        { techname: "C#" },
+        { techname: "React" },
+        { techname: "Typescript" },
+        { techname: "MySQL" },
+        { techname: "AWS" },
+        { techname: "Unit Testing" }
+      ]
+    },    
+    {
       name: "Rochester Institute of Technology",
       position: "Data Mining Principles Grader",
       year: "Aug, 2024 - Present",
