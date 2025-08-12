@@ -1,59 +1,127 @@
 import React, { useState } from "react";
 import "./WorkExperience.css";
 import Flip from "react-reveal/Flip";
-
 import { GrWorkshop } from "react-icons/gr";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+const WorkItem = ({ item }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  const liNodes = React.Children.toArray(item.des.props.children); 
+
+  const visible = expanded ? liNodes : liNodes.slice(0, 3);
+
+  return (
+    <VerticalTimelineElement
+      contentStyle={{ background: "#fff", color: "#525355" }}
+      contentArrowStyle={{ borderRight: "7px solid rgb(33,150,243)" }}
+      date={item.year}
+      dateClassName="date"
+      iconStyle={{ background: "rgb(56, 209, 3)", color: "#fff" }}
+      icon={<GrWorkshop color="white" />}
+    >
+      <h3 className="vertical-timeline-element-titles">{item.name}</h3>
+      <h4 className="vertical-timeline-element-subtitles">{item.position}</h4>
+
+      <div className="row mb-4">
+        {item.techused.map((tec, idx) => (
+          <div key={idx} className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div className="tech-used-at-work">
+              <p>{tec.techname}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <ul className={`desc-list ${expanded ? "expanded" : ""}`}>{visible}</ul>
+
+      {liNodes.length > 3 && (
+        <button className="read-more-btn" onClick={() => setExpanded(!expanded)}>
+          {expanded ? "Read Less" : "Read More"}
+        </button>
+      )}
+    </VerticalTimelineElement>
+  );
+};
+
 const WorkExperience = () => {
   const data = [
     {
       name: "Mindex",
       position: "Software Engineering Co-op",
-      year: "Jan, 2025 - Present",
+      year: "Jan, 2025 -  May, 2025",
       des: (
         <ul>
           <li>
-            Currently working on modernizing an invoice-based corporate banking system using React, C# .NET, MySQL, and AWS Lambda functions.
+            Contributed to modernizing an invoice-driven corporate banking platform by developing with React, C# .NET, and SQL Server while monitoring test suites through AWS services such as CloudWatch.
+          </li>
+          <li>
+            Implemented robust form error handling using React-Bootstrap with fallback components and conditional rendering, improving real-time user feedback and increasing form submission success rate by 20%.
+          </li>
+          <li>
+            Integrated custom Zod schemas with React forms for 20+ input models to enforce strict type validation at runtime, reducing front-end validation-related bugs by 30%.
+          </li>
+          <li>
+            Worked on a React/TypeScript repository structured around the Factory Method pattern, enabling clean separation of concerns and scalable API integration for over 10 business modules.
+          </li>
+          <li>
+            Conducted 30+ code reviews to ensure adherence to best practices and improve code quality across the team.
+          </li>
+          <li>
+            Investigated flaky test suites and led debugging initiatives using CloudWatch logs and Playwright traces, improving CI stability.
+          </li>
+          <li>
+            Leveraged Amazon Q’s LLM features to boost code documentation, error tracing, and test case generation, reducing development turnaround time by 25%.
+          </li>
+          <li>
+            Collaborated cross-functionally with backend and QA teams to define contract-first APIs and test plans, ensuring alignment.
           </li>
         </ul>
       ),
       techused: [
-        { techname: ".Net Framework" },
-        { techname: "C#" },
+        { techname: "C# .Net" },
         { techname: "React" },
         { techname: "Typescript" },
         { techname: "MySQL" },
         { techname: "AWS" },
+        { techname: "Playwright" },
+        { techname: "Bootstrap" },  
+        { techname: "Amazon Q" },
         { techname: "Unit Testing" }
       ]
     },    
     {
       name: "Rochester Institute of Technology",
       position: "Data Mining Principles Grader",
-      year: "Aug, 2024 - Present",
+      year: "Aug, 2024 - May, 2025",
       des: (
         <ul>
           <li>
-            Evaluated assignments for 20+ students by analyzing graphs generated
-            from their code, ensuring proper use of data mining techniques.
+            Engineered robust solution sets for key data mining assignments including Curses, Clusters, Classifications, Feature Selection, and Agglomerative Clustering to guide student understanding.
           </li>
           <li>
-            Conducted weekly office hours to address doubts and provide guidance.
+            Built a scalable analysis pipeline using MongoDB to process 1M+ IMDb records, involving data cleaning, indexing, and query optimization, cutting retrieval time by 40%.
+          </li>
+          <li>
+            Performed extensive data cleaning including null handling, normalization, and deduplication, streamlining analysis and reducing preprocessing effort by 30%.
           </li>
         </ul>
       ),
       techused: [
-        { techname: "Pandas" },
-        { techname: "Numpy" },
-        { techname: "Matplotlib" },
-      ],
-    },
+        { techname: "Python" },
+        { techname: "NumPy" },
+        { techname: "pandas" },
+        { techname: "scikit-learn" },
+        { techname: "MongoDB" },
+        { techname: "Jupyter" },
+        { techname: "SQL" },
+        { techname: "matplotlib" }
+      ]
+    },    
     {
       name: "Ecolab",
       position: "Software Engineering Co-op",
@@ -61,56 +129,78 @@ const WorkExperience = () => {
       des: (
         <ul>
           <li>
-            Developed reusable Angular components using Chart.js for interactive
-            line, doughnut, and bar charts with customized tooltips, logging MixPanel
-            events to analyze Ecolab sales data for 500+ Customer Account Managers
-            (CAMs).
+            Replaced legacy ECharts with modular Angular Chart.js components supporting dynamic accessibility features like tooltips and keyboard navigation, now used by 500+ Customer Account Managers (CAMs).
           </li>
           <li>
-            Developed full-stack features using Snowflake queries, .NET endpoints,
-            Angular frontend, along with Karma unit testing and Playwright automation
-            scripts.
+            Conducted thorough testing using Karma Unit Testing and Playwright Automation, fully integrated into the CI/CD pipeline to ensure smooth deployment with zero post-release issues.
           </li>
           <li>
-            Developed optimized Snowflake queries, improving data retrieval
-            efficiency by 30%.
+            Researched and configured Playwright automation to run locally, enabling faster debugging without relying on post-merge checks, reducing troubleshooting time by 30%.
           </li>
           <li>
-            Followed Agile processes to ensure iterative development, timely
-            delivery, and continuous improvement in project execution.
+            Refactored backend code by removing an unnecessary layer between service and factory, reducing complexity and improving backend maintainability by ~10%.
+          </li>
+          <li>
+            Created reusable analytics components for line graphs, bar charts, and bubble charts that require minimal data input, improving consistency across 4+ analytics modules.
+          </li>
+          <li>
+            Collaborated directly with users and product managers to gather functional requirements, validate workflows, and enhance user experience.
+          </li>
+          <li>
+            Refined Snowflake queries to improve data retrieval performance by 20%, supporting faster dashboard loads.
+          </li>
+          <li>
+            Participated in Agile ceremonies including daily stand-ups, retrospectives, and sprint planning across 3 full release cycles.
+          </li>
+          <li>
+            Utilized GitHub Copilot to accelerate the development of boilerplate code and unit tests, resulting in a 15–20% improvement in story point completion rate.
+          </li>
+          <li>
+            Developed an end-to-end photo gallery feature for CAMs to view sales complaint images, including functionality to zip and download all images, improving accessibility and reducing manual retrieval time by 40%.
           </li>
         </ul>
       ),
       techused: [
         { techname: "C#" },
-        { techname: ".Net" },
+        { techname: ".NET" },
         { techname: "Typescript" },
-        { techname: "AngularJS" },
-        { techname: "Playwright Automation" },
+        { techname: "Angular" },
+        { techname: "Chart.js" },
+        { techname: "Playwright " },
         { techname: "Snowflake" },
         { techname: "Git" },
-        { techname: "Karma Unit testing" },
-        { techname: "Agile Methodologies" },
-      ],
-    },
+        { techname: "Unit Testing" },
+        { techname: "Agile" },
+        { techname: "GitHub Copilot" }
+      ]
+    },    
     {
       name: "Rochester Institute of Technology",
       position: "Java Grader",
-      year: "2020-2021",
+      year: "Aug, 2023 - Dec, 2023",
       des: (
         <ul>
           <li>
-            Evaluated assignments and offered constructive feedback with detailed
-            coding suggestions for 20+ students in Advanced OOP course.
+            Engineered reference solutions for 10+ Java assignments covering OOP fundamentals, inheritance, interfaces, collections, exceptions, threads, file I/O, and JavaFX GUI programming.
           </li>
           <li>
-            Conducted one-on-one discussions weekly to understand student’s logic
-            and reasoning.
+            Reviewed and tested student code against edge cases, ensuring alignment with Java best practices and course specifications.
+          </li>
+          <li>
+            Provided clarifications and walkthroughs on complex topics such as abstract classes, multithreading, and event-driven programming, contributing to improved class-wide assignment performance.
+          </li>
+          <li>
+            Held 1-on-1 weekly sessions with students to understand their assignment challenges and suggested refactoring opportunities or alternative approaches for better code structure and logic.
           </li>
         </ul>
       ),
-      techused: [{ techname: "Java" }],
-    },
+      techused: [
+        { techname: "Java" },
+        { techname: "JavaFX" },
+        { techname: "OOP" },
+        { techname: "Multithreading" }
+      ]
+    },    
     {
       name: "Eszmeletlen Holding Co",
       position: "Software Engineer",
@@ -118,37 +208,39 @@ const WorkExperience = () => {
       des: (
         <ul>
           <li>
-            Developed and enhanced web applications using frontend technologies
-            like ReactJS and Tailwind for creating and customizing web stories and
-            interactive forms, serving a user base of over 1000+ users.
+            Engineered end-to-end features for <b>MakeStories.io</b> (a Canva-like platform for creating interactive web stories) and <b>MakeForms.io</b> (a dynamic form-building application), enhancing UX for 1,000+ active users across publishing and enterprise clients.
           </li>
           <li>
-            Integrated APIs using NodeJS and MySQL to efficiently manage user
-            information, ensuring seamless data storage and retrieval for web
-            stories and forms.
+            Designed and implemented 30+ scalable REST APIs with Node.js and MySQL, incorporating Redis caching logic to handle dynamic user data, optimize response times, and improve form submission reliability.
           </li>
           <li>
-            Enhanced functionalities to enable users to create and customize
-            interactive forms with flexible input fields and templates.
+            Increased application performance by 20% through optimization techniques using React Query, improving caching and staleness management while reducing unnecessary network calls.
           </li>
           <li>
-            Increased application performance by 20% through optimization
-            techniques like React Query, which reduced response times and improved
-            caching and staleness management.
+            Built a real-time news feed feature for <b>CNBC-18</b> using Next.js, integrating client-side polling to auto-refresh news updates and maintain up-to-the-minute coverage for end users.
+          </li>
+          <li>
+            Enhanced form customization capabilities by enabling flexible input fields, reusable templates, and drag-and-drop layout adjustments, streamlining the creation process for non-technical users.
+          </li>
+          <li>
+            Followed Agile processes, participating in sprint planning, backlog grooming, and daily stand-ups to ensure timely delivery and continuous iteration on features.
           </li>
         </ul>
       ),
       techused: [
-        { techname: "ReactJs" },
+        { techname: "React" },
         { techname: "Redux" },
-        { techname: "Tailwind" },
+        { techname: "Next.js" },
+        { techname: "Node.js" },
         { techname: "Typescript" },
         { techname: "React Query" },
+        { techname: "Tailwind" },
         { techname: "SCSS" },
-        { techname: "mySQL" },
-        { techname: "Agile Methodologies" },
-      ],
-    },
+        { techname: "MySQL" },
+        { techname: "Redis" },
+        { techname: "Agile" }
+      ]
+    },    
     {
       name: "Godrej Interio",
       position: "Graduate Engineering Trainee",
@@ -156,26 +248,38 @@ const WorkExperience = () => {
       des: (
         <ul>
           <li>
-            Improved user experience by 20% on the Godrej Interio e-commerce site
-            (B2C & B2B) by leveraging Google Analytics for actionable insights.
+            Collaborated with 5+ cross-functional teams including vendors, developers, and designers to deliver the end-to-end refund and returns module for the Godrej Interio e-commerce platform, now used by 1,000+ B2C and B2B customers.
           </li>
           <li>
-            Increased efficiency by 50% by automating bulk form filling for Google
-            My Business using JavaScript.
+            Evaluated and contributed to 20+ features and functionalities for the website experience, enhancing product discovery, checkout flow, and customer engagement.
+          </li>
+          <li>
+            Conducted competitor analysis on platforms like Pepperfry, Urban Ladder, and IKEA, focusing on SEO strategy, product taxonomy, and UX patterns to improve site architecture and navigation.
+          </li>
+          <li>
+            Leveraged Google Analytics to identify high-drop-off pages and implemented improvements to navigation, conversion funnels, and on-site engagement.
+          </li>
+          <li>
+            Executed on-page SEO optimizations including meta tag refinements, internal linking enhancements, and keyword-aligned content updates, increasing search visibility.
+          </li>
+          <li>
+            Automated bulk data updates using Excel macros, reducing manual work and improving update consistency.
           </li>
         </ul>
       ),
       techused: [
         { techname: "Google Analytics" },
-        { techname: "Software Engineering Life Cycle" },
+        { techname: "Power BI" },
+        { techname: "SDLC" },
         { techname: "JavaScript" },
         { techname: "Figma" },
-        { techname: "UI/UX" },
-      ],
-    },
+        { techname: "UI/UX Design" },
+        { techname: "Business Analytics" },
+        { techname: "SEO" },
+        { techname: "Excel Macros" }
+      ]
+    },    
   ];
-  
-  
 
   return (
     <div className="container" id="workexperience">
@@ -188,29 +292,7 @@ const WorkExperience = () => {
 
       <VerticalTimeline>
         {data.map((item, index) => (
-          <VerticalTimelineElement
-            contentStyle={{ background: "#fff", color: "#525355" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-            date={item.year}
-            dateClassName="date"
-            iconStyle={{ background: "rgb(56, 209, 3)", color: "#fff" }}
-            icon={<GrWorkshop color="white"/>}
-          >
-            <h3 className="vertical-timeline-element-titles">{item.name}</h3>
-            <h4 className="vertical-timeline-element-subtitles">
-              {item.position}
-            </h4>
-            <div className="row">
-              {item.techused.map((tec, index) => (
-                <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div key={index} className="tech-used-at-work">
-                    <p>{tec.techname}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p>{item.des}</p>
-          </VerticalTimelineElement>
+          <WorkItem key={index} item={item} />
         ))}
       </VerticalTimeline>
     </div>
@@ -218,3 +300,4 @@ const WorkExperience = () => {
 };
 
 export default WorkExperience;
+

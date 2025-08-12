@@ -31,8 +31,13 @@ const About = () => {
                   Hi, I am Kalpalathika Ramanujam
                 </p>
                 <p>
-                  Motivated Software Engineer pursuing a Master of Science in Computer Science at Rochester Institute of Technology with a strong background in full-stack development and data analytics. Proficient in C#, Python, and JavaScript frameworks, with experience in developing scalable applications, optimizing performance, and leveraging automation technologies.
+                    A Full-Stack Software Engineer with 3+ years of experience developing scalable, accessible web applications using React, Angular, Next.js, C# .NET, Node.js, and both SQL and NoSQL databases. I’ve contributed to high-impact systems across fintech, publishing, and enterprise domains, deploying solutions on AWS with a strong focus on performance, testing, and maintainability.
                 </p>
+
+                <p>
+                    During my recent internships, I worked with GitHub Copilot, Amazon Q, and ChatGPT prompt engineering to accelerate documentation, testing, and debugging. I’m currently expanding my knowledge in system design while deepening my exploration of prompt engineering, with the goal of building smarter, AI-augmented engineering systems that enhance design, development, and decision-making at scale.
+                </p>
+
               </Fade>
             </div>
           </div>

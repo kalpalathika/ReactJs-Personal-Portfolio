@@ -27,7 +27,23 @@
 }
 
 .vertical-timeline::before {
-  background: rgb(56, 209, 3,0.5) !important; /* Change this to your desired color */
+  background: rgb(56, 209, 3,0.5) !important;
+}
+
+.read-more-btn {
+  background: none;         
+  border: none;             
+  color: #007bff;           
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  float: right;             
+  margin-top: 6px;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
 }
 
 

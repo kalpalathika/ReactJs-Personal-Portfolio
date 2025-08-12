@@ -7,19 +7,24 @@ const TechStack = () => {
     {
       position: "Javascript",
       img: "https://images.pexels.com/photos/3608039/pexels-photo-3608039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      id: 0,
+    },
+    {
+      position: "C# .Net",
+      img: "https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       id: 1,
     },
     {
-      position: "Python",
+      position: "AWS",
       img: "https://images.pexels.com/photos/3608039/pexels-photo-3608039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       id: 2,
     },
     {
-  
-      position: "C#",
-      img: "https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      position: "Python",
+      img: "https://images.pexels.com/photos/3608039/pexels-photo-3608039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       id: 3,
     },
+  
     {
   
       position: "Typescript",

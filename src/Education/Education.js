@@ -14,7 +14,7 @@ const Education = () => {
     {
       name: "Masters of Science in Computer Science",
       position: "Rochester Institute of Technology",
-      year: "Jan, 2023 - Dec, 2024",
+      year: "Jan, 2023 - Aug, 2025",
       des: "Courses: Advanced Object Oriented Programming, Computational Problem Solving, Foundations of Algorithms, Big Data Analytics ",
     },
 

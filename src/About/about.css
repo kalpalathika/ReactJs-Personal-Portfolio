@@ -43,10 +43,6 @@
     padding: 20px;
   }
 
-  .about-details p{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-
   .about-title h5 {
     text-align: center;
   }
@@ -72,4 +68,8 @@
     animation: fadeIn 1.5s ease-in-out;
   }
   
+
+.about-me strong {
+    color: #007acc; /* highlight important keywords */
+}
   
