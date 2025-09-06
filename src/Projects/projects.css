@@ -3,13 +3,12 @@
   margin: 10px;
   padding: 0;
   border-radius: 8px;
-  box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
-  -webkit-box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
-  -moz-box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
   display: flex;
   flex-direction: row;
   overflow: hidden;
   position: relative;
+  background-color: #100c22;
+  color: white;
 }
 
 .project-content {
@@ -17,7 +16,8 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #100c22;
+  color: white;
 }
 
 .project-image-section {
@@ -28,25 +28,23 @@
   align-items: center;
   justify-content: center;
   background-color: white;
+  filter: brightness(0.7);
 }
 
 #dark .project-list {
-  background-color: #38004c;
+  background-color: #100c22;
   color: white;
   box-shadow: none;
 
-  box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
-  -webkit-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
 }
 
 .project-list-opened {
-  border-left: 5px solid rgb(56, 209, 3);
+  border-left: 5px solid #7b7cf1;
   cursor: pointer;
 }
 
 .project-list:hover {
-  border-left: 5px solid rgb(56, 209, 3);
+  border-left: 5px solid #7b7cf1;
   cursor: pointer;
   transition-duration: 1s;
 }
@@ -77,7 +75,7 @@
 
 .live-demo-button {
   margin-top: 20px;
-  background-color: rgb(4, 115, 234);
+  background-color: #7b7cf1;
   border-radius: 20px;
   color: white;
   width: fit-content;
@@ -85,7 +83,7 @@
 }
 
 .live-demo-button:hover {
-  background-color: rgb(4, 115, 234, 0.8);
+  background-color: rgba(123, 124, 241, 0.8);
   color: white;
   transition-duration: 1s;
 }
@@ -126,6 +124,10 @@
 
 .github-section {
   margin-top: auto;
+}
+
+.sendToPdfFiller {
+  display: none !important;
 }
 
 /* Unified card layout styles */
@@ -174,4 +176,27 @@
   .project-image {
     height: 250px;
   }
+}
+
+.section-title h5 {
+  text-align: center;
+  color: white;
+  font-family: "Jost Bold", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#dark .section-title h5 {
+  text-align: center;
+  color: white;
+  font-family: "Jost Bold", sans-serif;
+  font-weight: bold;
+}
+
+.line {
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #7b7cf1;
 }

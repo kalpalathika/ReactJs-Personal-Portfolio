@@ -6,7 +6,8 @@ const ProjectList = ({
   des,
   projectlink,
   techused,
-  image
+  image,
+  linkType = 'github'
 }) => {
   return (
     <div className="project-list">
@@ -18,7 +19,7 @@ const ProjectList = ({
         <div className="tech-section">
           <div className="row">
             {techused && techused.map((tec, index) => (
-              <div key={index} className="tech-used-in-projects" style={{backgroundColor: "#e7f1fd", color:"#0473ea"}}>
+              <div key={index} className="tech-used-in-projects" style={{backgroundColor: "#7b7cf1", color:"white"}}>
                 <p>{tec.techname}</p>
               </div>
             ))}
@@ -30,8 +31,8 @@ const ProjectList = ({
         <div className="github-section">
           <div className="live-demo-button">
             <p>
-              <a target="_" href={projectlink}>
-                Github Link
+              <a target="_blank" rel="noopener noreferrer" href={projectlink}>
+                {linkType === 'pdf' ? 'View Paper (PDF)' : 'Github Link'}
               </a>{" "}
             </p>
           </div>

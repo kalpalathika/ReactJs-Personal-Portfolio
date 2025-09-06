@@ -14,7 +14,6 @@ import { MdBiotech } from "react-icons/md";
 
 
 import { Link } from "react-scroll";
-import profile from "../images/a.jpg";
 
 import { MdCastForEducation } from "react-icons/md";
 

@@ -1,5 +1,28 @@
 .line-color-vertical{
     width: 5px;
-   color: brown;
-   background-color: #38d200;
+   color: white;
+   background-color: #7b7cf1;
+}
+
+.section-title h5 {
+  text-align: center;
+  color: white;
+  font-family: "Jost Bold", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#dark .section-title h5 {
+  text-align: center;
+  color: white;
+  font-family: "Jost Bold", sans-serif;
+  font-weight: bold;
+}
+
+.line {
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #7b7cf1;
 }

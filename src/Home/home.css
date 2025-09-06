@@ -29,7 +29,7 @@
 }
 
 .hire-me-button {
-  background-color:#FF854C;
+  background-color: #7b7cf1;
   text-align: center;
   width: 180px;
   padding: 10px;
@@ -51,7 +51,7 @@
 }
 
 .download-cv-button {
-  background-color: #FFBB28;
+  background-color: #7b7cf1;
   text-align: center;
   width: 180px;
   padding: 10px;
@@ -64,15 +64,15 @@
 
 .download-cv-button a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 
 .download-cv-button:hover {
-    background-color: rgb(232, 236, 25);
+    background-color: rgba(123, 124, 241, 0.7);
     text-align: center;
     width: 250px;
-    color: black;
+    color: white;
     padding: 10px;
     border-radius: 30px;
     cursor: pointer;
@@ -83,7 +83,7 @@
   justify-content: center;
   height: 50px;
   width: 50px;
-  background-color: #001cce;
+  background-color: #7b7cf1;
   right: 0;
   margin-right: 10px;
   text-align: center;

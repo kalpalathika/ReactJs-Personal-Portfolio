@@ -2,7 +2,7 @@ import React from "react";
 import "./about.css";
 import Fade from "react-reveal/Fade";
 import Typewriter from "typewriter-effect";
-import profile from "../images/a.jpg";
+import profile from "../images/profile.jpeg";
 
 const About = () => {
   return (
@@ -22,14 +22,9 @@ const About = () => {
         <Fade right>
           <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
             <div className="about-details">
-              <div className="about-title">
-                <h5>About me</h5>
-                <span className="line"></span>
-              </div>
-
               <Fade left>
-              <p className="h4 text-primary fw-bold mb-2 text-left py-3 fade-in">
-                  Hi, I am Kalpalathathika Ramanujam
+              <p className="fs-2 fw-bold mb-2 text-left py-3 fade-in" style={{color: "white"}}>
+                  Hi, I am Kalpalathika Ramanujam
                 </p>
                 <div className="animated-role-container">
                   <h3 className="animated-role-text">

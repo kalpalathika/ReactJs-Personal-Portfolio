@@ -1,7 +1,7 @@
 .sidebar-section{
     display: flex;
     /* background-color:  #cd5c5cda; */
-    background-color: #030303da;
+    background-color: #100c22;
 }
 
 
@@ -11,7 +11,7 @@
     /* background-color: #38004C; */
     height: 100vh;
     position: fixed;
-    background-color: #1358b8;
+    background-color: #100c22;
 }
 
 
@@ -40,7 +40,7 @@
 }
 
 .icon-for-sidebar-expand p svg{
-    background-color: rgb(56, 209, 3);
+    background-color: #7b7cf1;
     padding: 5px;
     color: #ffffff;
     border-radius: 5px;

@@ -1,5 +1,5 @@
 .date {
-  color: black;
+  color: white;
 }
 
 #dark .date{
@@ -14,20 +14,20 @@
 
 
 .tech-used-at-work p{
-    background-color: #e7f1fd;
+    background-color: #7b7cf1;
     border-radius: 90px;
-    color: #0473ea;
+    color: white;
     padding: 10px;
     text-align: center;
 
 }
 .tech-used-at-work p:hover{
-    background-color: rgb(6, 115, 234,0.7);
+    background-color: rgba(123, 124, 241, 0.7);
     cursor: pointer;
 }
 
 .vertical-timeline::before {
-  background: rgb(56, 209, 3,0.5) !important;
+  background: rgba(123, 124, 241, 0.5) !important;
 }
 
 .read-more-btn {

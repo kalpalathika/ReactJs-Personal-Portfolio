@@ -40,8 +40,8 @@
 
 .nav-item .active{
 
-  border-left: 2px solid rgb(56, 209, 3);
-  color: rgb(56, 209, 3);
+  border-left: 2px solid #7b7cf1;
+  color: #7b7cf1;
 
 
 }
@@ -56,5 +56,5 @@
     display: flex;
     vertical-align: middle;
     margin: 0 auto;
-    border: 3px solid yellow;
+    border: 3px solid #7b7cf1;
 }

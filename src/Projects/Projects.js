@@ -78,6 +78,33 @@ const Projects = () => {
         }
       ],
       projectlink: "https://github.com/kalpalathika/fetch",
+    },
+    {
+      name: "Air Pollution & Respiratory Health: A Geospatial Analysis",
+      des: "Conducted a comprehensive geospatial analysis using ArcGIS Pro to examine correlations between PM2.5 air pollution levels and respiratory health outcomes (asthma, COPD, lung cancer) across North America. Applied hotspot analysis and demographic overlays to identify high-risk regions, with a focus on vulnerable populations under 18 and over 65. Findings highlighted strong spatial links between elevated PM2.5 levels and increased respiratory disease rates, emphasizing the need for targeted public health interventions and policy action.",
+      image: "GIS.png",
+      techused: [
+        {
+          techname: "ArcGIS Pro",
+        },
+        {
+          techname: "Python",
+        },
+        {
+          techname: "Geospatial Analysis",
+        },
+        {
+          techname: "Hotspot Analysis",
+        },
+        {
+          techname: "Statistical Modeling",
+        },
+        {
+          techname: "Data Visualization",
+        }
+      ],
+      projectlink: `${process.env.PUBLIC_URL}/GIS_Research.pdf`,
+      linkType: 'pdf'
     }
   ];
 

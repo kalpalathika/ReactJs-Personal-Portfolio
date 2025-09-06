@@ -1,6 +1,6 @@
 .container {
     padding: 20px;
-    color: black;
+    color: white;
   }
   
   .techstack-section {
@@ -13,11 +13,17 @@
   
   .section-title h5 {
     text-align: center;
+    color: white;
+    font-family: "Jost Bold", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
   }
 
   #dark .section-title h5 {
     text-align: center;
     color: white;
+    font-family: "Jost Bold", sans-serif;
+    font-weight: bold;
   }
   
   .line {
@@ -25,15 +31,15 @@
     width: 70px;
     height: 3px;
     margin: 5px auto;
-    background-color: #38d200;
+    background-color: #7b7cf1;
   }
   
   .tech-content {
     padding: 10px;
-    color: #0473ea;
+    color: white;
     margin-top: 50px;  
-    box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
-    background: #e7f1fd; /* Gradient background */
+    box-shadow: 15px 9px 9px -2px rgba(123, 124, 241, 0.3);
+    background: #7b7cf1;
     border-radius: 10px;
   }
 
@@ -46,12 +52,9 @@
   
   #dark .tech-content {
     color: white;
-    background-color: #38004c;
+    background-color: #100c22;
     box-shadow: none;
   
-    box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
-    -webkit-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
-    -moz-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
   }
   
   

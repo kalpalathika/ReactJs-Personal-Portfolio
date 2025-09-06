@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./navmobile.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-scroll";
-import profileImg from "../images/a.jpg";
+import profileImg from "../images/profile.jpeg";
 
 import {
   FcNightPortrait,

@@ -16,7 +16,7 @@
 .content-slider {
   padding: 10px;
   color: white;
-  background: linear-gradient(90deg, #2c3a87, #0061c7); /* Updated background */
+  background: #100c22;
   margin: 10px;
   margin-top: 50px;
   text-align: center;
@@ -25,18 +25,12 @@
 }
 
 #dark .content-slider {
-  background: linear-gradient(90deg, #2c3a87, #0061c7); /* Updated for dark mode */
+  background: #100c22;
   color: white;
-  box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
-  -webkit-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
 }
 
 .content-slider:hover {
-  background-color: rgb(15, 15, 249);
-  box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
-  -webkit-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
+  background-color: #7b7cf1;
   transition-duration: 1s;
   cursor: pointer;
 }
@@ -51,7 +45,7 @@
   margin-top: -30px;
   justify-content: center;
   align-items: center;
-  border: 5px solid yellow;
+  border: 5px solid #7b7cf1;
 }
 
 .slick-prev:before{
@@ -74,7 +68,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(56, 209, 3); /* Updated color */
+  background-color: #7b7cf1;
   border-radius: 10px;
 }
 
@@ -85,5 +79,28 @@
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgb(56, 209, 3) rgba(0, 0, 0, 0.2); /* Thumb color and track color */
+  scrollbar-color: #7b7cf1 rgba(0, 0, 0, 0.2);
+}
+
+.section-title h5 {
+  text-align: center;
+  color: white;
+  font-family: "Jost Bold", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#dark .section-title h5 {
+  text-align: center;
+  color: white;
+  font-family: "Jost Bold", sans-serif;
+  font-weight: bold;
+}
+
+.line {
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #7b7cf1;
 }
