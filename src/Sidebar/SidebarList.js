@@ -17,218 +17,114 @@ import { Link } from "react-scroll";
 
 import { MdCastForEducation } from "react-icons/md";
 
-const SidebarList = ({ expandSidebar }) => {
+const SidebarList = () => {
   return (
-    <div>
-      {expandSidebar ? (
-        <div className="navbar-items">
-          <ul>
-            <li className="nav-item">
-              {/* <Link
-                to="home"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcHome size={25} />
-                Home
-              </Link> */}
-            </li>
+    <div className="navbar-items-sliding">
+      <ul>
+        <li className="nav-item-slide">
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={100}
+          >
+            <span className="nav-icon"><FcHome size={25} /></span>
+            <span className="nav-text">Home</span>
+          </Link>
+        </li>
 
-            <li className="nav-item">
-              <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcNightPortrait size={25} />
-                About
-              </Link>
-            </li>
+        <li className="nav-item-slide">
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={100}
+          >
+            <span className="nav-icon"><FcNightPortrait size={25} /></span>
+            <span className="nav-text">About</span>
+          </Link>
+        </li>
 
-            <li className="nav-item">
-              <Link
-                to="workexperience"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcFactory size={25} />
-                Work Experience
-              </Link>
-            </li>
+        <li className="nav-item-slide">
+          <Link
+            to="workexperience"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={100}
+          >
+            <span className="nav-icon"><FcFactory size={25} /></span>
+            <span className="nav-text">Work Exp</span>
+          </Link>
+        </li>
 
-            <li className="nav-item">
-              <Link
-                to="techstack"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <MdBiotech size={25} />
-                Skills
-              </Link>
-            </li>
+        <li className="nav-item-slide">
+          <Link
+            to="techstack"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={100}
+          >
+            <span className="nav-icon"><MdBiotech size={25} /></span>
+            <span className="nav-text">Skills</span>
+          </Link>
+        </li>
 
-            <li className="nav-item">
-              <Link
-                to="education"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <MdCastForEducation size={25} color="yellow" />
-                Education
-              </Link>
-            </li>
+        <li className="nav-item-slide">
+          <Link
+            to="education"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={100}
+          >
+            <span className="nav-icon"><MdCastForEducation size={25} color="yellow" /></span>
+            <span className="nav-text">Education</span>
+          </Link>
+        </li>
 
-            <li className="nav-item">
-              <Link
-                to="project"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcTodoList size={25} />
-                Projects
-              </Link>
-            </li>
+        <li className="nav-item-slide">
+          <Link
+            to="project"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={100}
+          >
+            <span className="nav-icon"><FcTodoList size={25} /></span>
+            <span className="nav-text">Projects</span>
+          </Link>
+        </li>
 
-            <li className="nav-item">
-              <Link
-                to="testimonial"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcSalesPerformance size={25} />
-                Testimonial
-              </Link>
-            </li>
+        <li className="nav-item-slide">
+          <Link
+            to="testimonial"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={100}
+          >
+            <span className="nav-icon"><FcSalesPerformance size={25} /></span>
+            <span className="nav-text">Testimonial</span>
+          </Link>
+        </li>
 
-            <li className="nav-item">
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcContacts size={25} />
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-      ) : (
-        <div className="navbar-items-only-icons">
-          <ul>
-            <li className="nav-item">
-              <Link
-                to="home"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcHome size={25} />
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcNightPortrait size={25} />
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                to="workexperience"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcFactory size={25} color="orange" />
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                to="techstack"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <MdBiotech size={25} color="orange" />
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                to="education"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <MdCastForEducation size={25} color="yellow" />
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                to="project"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcTodoList size={25} />
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                to="testimonial"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcSalesPerformance size={25} />
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcContacts size={25} />
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
+        <li className="nav-item-slide">
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={100}
+          >
+            <span className="nav-icon"><FcContacts size={25} /></span>
+            <span className="nav-text">Contact</span>
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };

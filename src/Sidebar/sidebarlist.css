@@ -1,23 +1,89 @@
+/* Sliding Navigation Styles */
+.navbar-items-sliding {
+  padding: 20px 0;
+}
+
+.navbar-items-sliding ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item-slide {
+  position: relative;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.nav-item-slide a {
+  display: flex;
+  align-items: center;
+  color: white !important;
+  text-decoration: none;
+  position: relative;
+  padding: 12px 10px;
+  transition: all 0.3s ease;
+  overflow: visible;
+  width: 50px;
+}
+
+.nav-item-slide:hover a {
+  background-color: #100c22;
+  border-radius: 25px 0 0 25px;
+  width: 180px;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.nav-item-slide:hover .nav-icon {
+  transform: translateX(120px);
+}
+
+.nav-text {
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+  color: white !important;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-item-slide:hover .nav-text {
+  opacity: 1;
+}
+
+.nav-item-slide.active a {
+  border-left: 3px solid #7b7cf1;
+  color: #7b7cf1;
+}
+
+/* Legacy styles for backwards compatibility */
 .navbar-items ul li{
     color: white;
     list-style-type: none;
     cursor: pointer;
     margin-top: 30px;
-
 }
 
 .navbar-items ul li a {
-
     color: white;
     text-decoration: none;
-
 }
-
 
 .navbar-items ul li svg{
     margin-right: 25px;
     margin-left: 10px;
-
 }
 
 .navbar-items-only-icons ul {
@@ -25,25 +91,19 @@
     margin-left: 10px;
 }
 
-.navbar-items-only-icons ul li  svg{
- margin-left: 10px;
-
+.navbar-items-only-icons ul li svg{
+    margin-left: 10px;
 }
 
 .navbar-items-only-icons ul li {
     margin-top: 30px;
     cursor: pointer;
     list-style-type: none;
-
 }
 
-
 .nav-item .active{
-
-  border-left: 2px solid #7b7cf1;
-  color: #7b7cf1;
-
-
+    border-left: 2px solid #7b7cf1;
+    color: #7b7cf1;
 }
 
 .sidebar-profile-pic img{
