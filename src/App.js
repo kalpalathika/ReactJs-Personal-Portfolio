@@ -33,11 +33,10 @@ const App = () => {
           </div>
           <div className= {expandSidebar ? "main-content-sidebar-expanded" : "main-content-sidebar-contracted"}>
             <About />
-            <WorkExperience />
-            <TechStack />
-
-            <Education />
             <Projects />
+            <WorkExperience />
+            <Education />
+
             <Feedback />
 
             <Contact />

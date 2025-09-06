@@ -44,14 +44,21 @@
   }
 
   .about-title h5 {
-    text-align: center;
+    text-align: left;
+  }
+
+  .about-title {
+    text-align: left;
+  }
+  .about-title .line{
+    margin: 5px;
   }
 
   .line {
     display: block;
     width: 70px;
     height: 3px;
-    margin: 5px auto;
+    margin: 5px 0;
     background-color: #38d200;
   }
   
@@ -71,5 +78,37 @@
 
 .about-me strong {
     color: #007acc; /* highlight important keywords */
+}
+
+/* Animated role text styling */
+.animated-role-container {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.animated-role-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.typewriter-text {
+  color: #0673ea;
+  font-weight: 700;
+}
+
+#dark .animated-role-text {
+  color: white;
+}
+
+#dark .typewriter-text {
+  color: rgb(56, 209, 3);
+}
+
+@media (max-width: 768px) {
+  .animated-role-text {
+    font-size: 1.4rem;
+  }
 }
   

@@ -1,6 +1,7 @@
 import React from "react";
 import "./about.css";
 import Fade from "react-reveal/Fade";
+import Typewriter from "typewriter-effect";
 import profile from "../images/a.jpg";
 
 const About = () => {
@@ -27,11 +28,31 @@ const About = () => {
               </div>
 
               <Fade left>
-              <p className="h4 text-primary fw-bold mb-2 text-center py-3 fade-in">
-                  Hi, I am Kalpalathika Ramanujam
+              <p className="h4 text-primary fw-bold mb-2 text-left py-3 fade-in">
+                  Hi, I am Kalpalathathika Ramanujam
                 </p>
+                <div className="animated-role-container">
+                  <h3 className="animated-role-text">
+                    I am a{" "}
+                    <span className="typewriter-text">
+                      <Typewriter
+                        options={{
+                          strings: [
+                            "Full-Stack Developer",
+                            "React/TypeScript Nerd",
+                            "C# .NET Developer"
+                          ],
+                          autoStart: true,
+                          loop: true,
+                          delay: 75,
+                          deleteSpeed: 50,
+                        }}
+                      />
+                    </span>
+                  </h3>
+                </div>
                 <p>
-                    A Full-Stack Software Engineer with 3+ years of experience developing scalable, accessible web applications using React, Angular, Next.js, C# .NET, Node.js, and both SQL and NoSQL databases. I’ve contributed to high-impact systems across fintech, publishing, and enterprise domains, deploying solutions on AWS with a strong focus on performance, testing, and maintainability.
+                    With 3+ years of experience developing scalable, accessible web applications using React, Angular, Next.js, C# .NET, Node.js, and both SQL and NoSQL databases. I've contributed to high-impact systems across fintech, publishing, and enterprise domains, deploying solutions on AWS with a strong focus on performance, testing, and maintainability.
                 </p>
 
                 <p>

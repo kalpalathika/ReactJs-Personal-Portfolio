@@ -6,68 +6,78 @@ import Flip from "react-reveal/Flip";
 const Projects = () => {
   const projectList = [
     {
-      name: "Classifier Visualizer",
-      des: (
-        <ul>
-          <li> Developed an interactive visualizer with ReactJs, Tailwind CSS, and Flask for real-time ML data charts, integrating KNN, least
-          squares with adjustable parameters. </li>
-          <li>Established seamless frontend-to-model communication using scikit-learn, numpy, and Flask, while working on developing the random
-          forest classifier and a caching system for 50% faster result rendering.</li>
-        </ul>
-      ),
+      name: "Daily Win Sparkle",
+      des: "A gamified personal achievement tracking application that helps users celebrate their daily wins with streaks, confetti animations, and motivational messages. Built with React 18, TypeScript, Vite, and Supabase backend with Google OAuth authentication.",
+      image: "LittleWins.png",
 
       techused: [
         {
-          techname: "Pandas",
-        },
-        {
-          techname: "Numpy",
-        },
-        {
-          techname: "Matplotlib",
-        },
-        {
-          techname: "scikit-learn"
-        },
-        {
-          techname: "ReactJs",
-        },
-        {
-          techname: "Tailwind CSS",
-        },
-        {
-          techname: "Flask",
-        }
-      ],
-      projectlink: "https://github.com/kalpalathika/Classifier-Visualizer/tree/master",
-    },
-    {
-      name: "Accountax",
-      des: (
-        <ul>
-          <li>Developed a responsive financial website for chartered accountant agents using ReactJS, TypeScript, Tailwind CSS, and NestJS.</li>
-          <li>Integrated interactive Google Maps using google-maps-react library for office locations and implemented a robust Nodemailer-based
-              mailing system to manage potential leads.</li>
-        </ul>
-      ),
-      techused: [
-        {
-          techname: "ReactJS",
+          techname: "React 18",
         },
         {
           techname: "TypeScript",
         },
         {
+          techname: "Vite",
+        },
+        {
+          techname: "React Query",
+        },
+        {
+          techname: "React Hook Form",
+        },
+        {
+          techname: "Zod",
+        },
+        {
+          techname: "Supabase",
+        },
+        {
+          techname: "PostgreSQL",
+        },
+        {
+          techname: "Google OAuth 2.0",
+        }
+      ],
+      projectlink: "https://github.com/kalpalathika/daily-win-sparkle",
+    },
+    {
+      name: "Fetch App",
+      des: "A web application designed for dog lovers to explore, filter, and interact with various dog listings. Built with React, TypeScript, and Tailwind CSS, featuring Redux state management and comprehensive testing with Vitest.",
+      image: "Fetch.png",
+      techused: [
+        {
+          techname: "React",
+        },
+        {
+          techname: "TypeScript",
+        },
+        {
+          techname: "React Router DOM",
+        },
+        {
           techname: "Tailwind CSS",
         },
         {
-          techname: "NestJS",
+          techname: "React Query",
         },
         {
-          techname: "node-mailer",
+          techname: "Recoil",
         },
+        {
+          techname: "react-select",
+        },
+        {
+          techname: "react-paginate",
+        },
+        {
+          techname: "Vitest",
+        },
+        {
+          techname: "React Testing Library",
+        }
       ],
-      projectlink: "https://github.com/kalpalathika/Accountax",
+      projectlink: "https://github.com/kalpalathika/fetch",
     }
   ];
 
@@ -79,11 +89,11 @@ const Projects = () => {
           <span className="line"></span>
         </Flip>
       </div>
-      <div className="row">
+      <div className="projects-container">
         {projectList.map((item, index) => (
-          <Fade right>
-            <div className="col-xl-6, col-lg-6, col-md-6, col-sm-6">
-              <ProjectList key={index} {...item} index={index} />
+          <Fade right key={index}>
+            <div className="project-unified-card">
+              <ProjectList {...item} index={index} />
             </div>
           </Fade>
         ))}
