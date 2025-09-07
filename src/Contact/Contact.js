@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import "./contact.css";
 import { IoIosSend } from "react-icons/io";
 import Fade from "react-reveal/Fade";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
@@ -9,21 +10,20 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // emailjs.sendForm(
-    //   'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-    //   'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-    //   form.current,
-    //   'YOUR_USER_ID' // Replace with your EmailJS user ID (or public key)
-    // )
-    // .then((result) => {
-    //   console.log(result.text);
-    //   alert('Email sent successfully!');
-    // }, (error) => {
-    //   console.log(error.text);
-    //   alert('Failed to send email. Please try again.');
-    // });
+    // For now, create a mailto link to kr9699@rit.edu
+    const formData = new FormData(form.current);
+    const name = formData.get('user_name');
+    const email = formData.get('user_email');
+    const jobType = formData.get('job_type');
+    const message = formData.get('message');
 
-    // e.target.reset(); // Clear the form after sending
+    const subject = `Contact Form Submission - ${jobType} Position`;
+    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AJob Type: ${jobType}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+    
+    window.open(`mailto:kr9699@rit.edu?subject=${encodeURIComponent(subject)}&body=${body}`, '_self');
+    
+    // Clear form after sending
+    e.target.reset();
   };
 
   return (

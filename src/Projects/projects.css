@@ -165,16 +165,19 @@
   }
   
   .project-content {
-    order: 1;
+    order: 2;
   }
   
   .project-image-section {
-    order: 2;
-    height: 250px;
+    order: 1;
+    height: 200px;
+    padding: 10px;
   }
   
   .project-image {
-    height: 250px;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
   }
 }
 

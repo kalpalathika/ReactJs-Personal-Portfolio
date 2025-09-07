@@ -79,23 +79,38 @@
   background-color: #100c22;
 }
 
-.button-submit p {
+.button-submit {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  border-radius: 30px;
-  background-color: #7b7cf1;
-  color: white;
-  padding: 10px;
-  width: 50%;
-  margin-top: 40px;
-  cursor: pointer;
+  margin-top: 30px;
 }
 
-.button-submit p:hover {
-  background-color: rgba(123, 124, 241, 0.7);
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #7b7cf1;
   color: white;
-  transition-duration: 2s;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(123, 124, 241, 0.3);
+}
+
+.send-button:hover {
+  background-color: #6b6ce8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(123, 124, 241, 0.4);
+}
+
+.send-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(123, 124, 241, 0.3);
 }
 
 @media (max-width: 1000px) {

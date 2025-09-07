@@ -35,14 +35,14 @@ const Education = () => {
         </Flip>
       </div>
 
-      <VerticalTimeline lineColor="#FF8042">
+      <VerticalTimeline lineColor="#7b7cf1">
         {data.map((item, index) => (
           <VerticalTimelineElement
-            contentStyle={{ background: "#fff", color: "#525355" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+            contentStyle={{ background: "#100c22", color: "white", border: "1px solid #7b7cf1" }}
+            contentArrowStyle={{ borderRight: "7px solid #100c22" }}
             date={item.year}
             dateClassName="date"
-            iconStyle={{ background: "rgb(56, 209, 3)", color: "#fff" }}
+            iconStyle={{ background: "#7b7cf1", color: "#fff" }}
             icon={<MdCastForEducation />}
           >
             <h3 className="vertical-timeline-element-titles">{item.name}</h3>

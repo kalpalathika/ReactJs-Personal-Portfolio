@@ -7,7 +7,7 @@ const Projects = () => {
   const projectList = [
     {
       name: "Daily Win Sparkle",
-      des: "A gamified personal achievement tracking application that helps users celebrate their daily wins with streaks, confetti animations, and motivational messages. Built with React 18, TypeScript, Vite, and Supabase backend with Google OAuth authentication.",
+      des: "A gamified personal achievement tracking application that helps users celebrate their daily wins with streaks, confetti animations, and motivational messages. Features secure authentication and real-time data synchronization.",
       image: "LittleWins.png",
 
       techused: [
@@ -43,7 +43,7 @@ const Projects = () => {
     },
     {
       name: "Fetch App",
-      des: "A web application designed for dog lovers to explore, filter, and interact with various dog listings. Built with React, TypeScript, and Tailwind CSS, featuring Redux state management and comprehensive testing with Vitest.",
+      des: "A web application designed for dog lovers to explore, filter, and interact with various dog listings. Features advanced filtering, interactive search, and comprehensive testing for optimal user experience.",
       image: "Fetch.png",
       techused: [
         {

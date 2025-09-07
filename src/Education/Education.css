@@ -26,3 +26,16 @@
   margin: 5px auto;
   background-color: #7b7cf1;
 }
+
+.date {
+  color: white !important;
+  font-weight: bold;
+}
+
+.vertical-timeline-element-titles {
+  color: white !important;
+}
+
+.vertical-timeline-element-subtitles {
+  color: #7b7cf1 !important;
+}
