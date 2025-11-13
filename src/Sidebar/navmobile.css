@@ -1,5 +1,5 @@
 .mobile-view-header {
-  width: 100vh;
+  width: 100vw;
   background: #100c22;
   color: white;
   justify-content: space-between;
@@ -15,6 +15,7 @@
   align-items: center;
   top: 0;
   z-index: 1;
+  width: 100%;
 }
 
 .responsivenav-for-frontclient p svg {
@@ -25,10 +26,11 @@
   margin-right: 10px;
 }
 .mobile-nav {
-  height: autos;
-  width: 210px;
+  height: auto;
+  width: 100vw;
   background: #100c22;
   margin-top: 10px;
+  padding-bottom: 20px;
 
 }
 

@@ -66,35 +66,7 @@ const WorkExperience = () => {
         { techname: "Amazon Q" },
         { techname: "Unit Testing" }
       ]
-    },    
-    {
-      name: "Rochester Institute of Technology",
-      position: "Data Mining Principles Grader",
-      year: "Aug, 2024 - May, 2025",
-      des: (
-        <ul>
-          <li>
-            Engineered solution sets for data mining assignments including clustering, classification, and feature selection.
-          </li>
-          <li>
-            Built scalable MongoDB analysis pipeline processing 1M+ IMDb records, cutting retrieval time by 40%.
-          </li>
-          <li>
-            Performed extensive data cleaning with null handling and normalization, reducing preprocessing effort by 30%.
-          </li>
-        </ul>
-      ),
-      techused: [
-        { techname: "Python" },
-        { techname: "NumPy" },
-        { techname: "pandas" },
-        { techname: "scikit-learn" },
-        { techname: "MongoDB" },
-        { techname: "Jupyter" },
-        { techname: "SQL" },
-        { techname: "matplotlib" }
-      ]
-    },    
+    },
     {
       name: "Ecolab",
       position: "Software Engineering Co-op",
@@ -125,31 +97,7 @@ const WorkExperience = () => {
         { techname: "Agile" },
         { techname: "GitHub Copilot" }
       ]
-    },    
-    {
-      name: "Rochester Institute of Technology",
-      position: "Java Grader",
-      year: "Aug, 2023 - Dec, 2023",
-      des: (
-        <ul>
-          <li>
-            Engineered reference solutions for 10+ Java assignments covering OOP, threads, collections, and JavaFX GUI programming.
-          </li>
-          <li>
-            Reviewed student code against edge cases, ensuring alignment with Java best practices and course specifications.
-          </li>
-          <li>
-            Provided 1-on-1 weekly mentoring sessions, improving class-wide assignment performance through targeted guidance.
-          </li>
-        </ul>
-      ),
-      techused: [
-        { techname: "Java" },
-        { techname: "JavaFX" },
-        { techname: "OOP" },
-        { techname: "Multithreading" }
-      ]
-    },    
+    },
     {
       name: "Eszmeletlen Holding Co",
       position: "Software Engineer",

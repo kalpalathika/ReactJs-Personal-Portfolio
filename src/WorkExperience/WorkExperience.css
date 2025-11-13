@@ -14,7 +14,7 @@
 
 
 .tech-used-at-work p{
-    background-color: #7b7cf1;
+    background-color: #475569;
     border-radius: 90px;
     color: white;
     padding: 10px;
@@ -22,8 +22,8 @@
 
 }
 .tech-used-at-work p:hover{
-    background-color: rgba(123, 124, 241, 0.7);
-    cursor: pointer;
+    background-color: #5a6777;
+    cursor: default;
 }
 
 .vertical-timeline::before {

@@ -11,6 +11,7 @@ import {
   FcContacts,
   FcFactory,
   FcSalesPerformance,
+  FcReading,
 } from "react-icons/fc";
 import { MdBiotech } from "react-icons/md";
 import { MdCastForEducation } from "react-icons/md";
@@ -57,6 +58,19 @@ const NavbarMobile = ({ toggleTheme, theme }) => {
 
             <li className="nav-item-mobile">
               <Link
+                to="project"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={100}
+              >
+                <FcTodoList size={25} />
+                Projects
+              </Link>
+            </li>
+
+            <li className="nav-item-mobile">
+              <Link
                 to="workexperience"
                 spy={true}
                 smooth={true}
@@ -70,14 +84,14 @@ const NavbarMobile = ({ toggleTheme, theme }) => {
 
             <li className="nav-item-mobile">
               <Link
-                to="techstack"
+                to="academicexperience"
                 spy={true}
                 smooth={true}
                 offset={-100}
                 duration={100}
               >
-                <MdBiotech size={25} />
-                Skills
+                <FcReading size={25} />
+                Academic Excellence
               </Link>
             </li>
 
@@ -91,19 +105,6 @@ const NavbarMobile = ({ toggleTheme, theme }) => {
               >
                 <MdCastForEducation size={25} color="yellow" />
                 Education
-              </Link>
-            </li>
-
-            <li className="nav-item-mobile">
-              <Link
-                to="project"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={100}
-              >
-                <FcTodoList size={25} />
-                Projects
               </Link>
             </li>
 

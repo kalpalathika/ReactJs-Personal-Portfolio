@@ -9,6 +9,7 @@ import NavbarMobile from "./Sidebar/NavbarMobile";
 import "./App.css";
 import ScrollToTop from "react-scroll-to-top";
 import WorkExperience from "./WorkExperience/WorkExperience";
+import AcademicExperience from "./AcademicExperience/AcademicExperience";
 import Education from "./Education/Education";
 export const ThemeContext = createContext(null);
 
@@ -35,6 +36,7 @@ const App = () => {
             <About />
             <Projects />
             <WorkExperience />
+            <AcademicExperience />
             <Education />
 
             <Feedback />

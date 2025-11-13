@@ -7,6 +7,7 @@ import {
   FcContacts,
   FcFactory,
   FcSalesPerformance,
+  FcReading,
 } from "react-icons/fc";
 
 
@@ -49,6 +50,19 @@ const SidebarList = () => {
 
         <li className="nav-item-slide">
           <Link
+            to="project"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={100}
+          >
+            <span className="nav-icon"><FcTodoList size={25} /></span>
+            <span className="nav-text">Projects</span>
+          </Link>
+        </li>
+
+        <li className="nav-item-slide">
+          <Link
             to="workexperience"
             spy={true}
             smooth={true}
@@ -62,14 +76,14 @@ const SidebarList = () => {
 
         <li className="nav-item-slide">
           <Link
-            to="techstack"
+            to="academicexperience"
             spy={true}
             smooth={true}
             offset={-100}
             duration={100}
           >
-            <span className="nav-icon"><MdBiotech size={25} /></span>
-            <span className="nav-text">Skills</span>
+            <span className="nav-icon"><FcReading size={25} /></span>
+            <span className="nav-text">Academic</span>
           </Link>
         </li>
 
@@ -83,19 +97,6 @@ const SidebarList = () => {
           >
             <span className="nav-icon"><MdCastForEducation size={25} color="yellow" /></span>
             <span className="nav-text">Education</span>
-          </Link>
-        </li>
-
-        <li className="nav-item-slide">
-          <Link
-            to="project"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={100}
-          >
-            <span className="nav-icon"><FcTodoList size={25} /></span>
-            <span className="nav-text">Projects</span>
           </Link>
         </li>
 
