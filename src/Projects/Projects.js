@@ -59,7 +59,7 @@ const Projects = () => {
           techname: "Vector Search",
         }
       ],
-      projectlink: "https://github.com/kalpalathika/MCP-Enhanced-Data-Retrieval"
+      projectlink: "https://github.com/kalpalathika/MCP-Enhanced-Data-Retrieval-System"
     },
     {
       name: "GoBooks",
