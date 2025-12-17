@@ -6,6 +6,33 @@ import Flip from "react-reveal/Flip";
 const Projects = () => {
   const projectList = [
     {
+      name: "BrightMinds",
+      des: "A responsive educational non-profit website with UI that actually matches the design, built with React, TypeScript, and Tailwind CSS.",
+      image: "brightMinds.png",
+      techused: [
+        {
+          techname: "React 18",
+        },
+        {
+          techname: "TypeScript",
+        },
+        {
+          techname: "Tailwind CSS",
+        },
+        {
+          techname: "React Hook Form",
+        },
+        {
+          techname: "Zod",
+        },
+        {
+          techname: "Lucide React",
+        }
+      ],
+      projectlink: "https://github.com/kalpalathika/BrightMinds",
+      demoLink: "https://kalpalathika.github.io/BrightMinds/"
+    },
+    {
       name: "DocuFlow AI",
       des: "An AI-powered legal document automation platform that simplifies document filling through conversational interfaces. Upload a template document, answer questions naturally, and generate completed documents automatically.",
       image: "docuFlowAI.png",
